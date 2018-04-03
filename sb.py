@@ -27,7 +27,7 @@ while True:
                     if msg.toType == 2:
                         may = client.getProfile().mid
                         if may in str(msg.contentMetadata) and 'MENTION' in str(msg.contentMetadata):
-                            pilih = ['yang tag gw bisa jontor seumur hidup','ngapain tag tag woe, pm aja langsung cin?','ada apa ini? ko di tag? kalo kangen mitap aja','duhh tag lagi, kesepian yah?','gk usah tag, gift tikel aja']
+                            pilih = ['yang tag gw jitak','ngapain tag cin, pm aja langsung ?','kalo kangen jangan cuma ngatag aja','duhh tag lagi..tag lagi, lama lama gw jitak ni..','biaya tag mahal oooi... jangan tag muluuu']
                             rslt = random.choice(pilih)
                             client.sendText(msg.to, str(rslt))
                         else:
@@ -47,14 +47,14 @@ while True:
                         if msg.toType == 2:
                             client.sendChatChecked(receiver, msg_id)
                             contact = client.getContact(sender)
-                            if text.lower() == 'ak':
+                            if text.lower() == 'kenalin':
                                 client.sendMessage(receiver, None, contentMetadata={'mid': sender}, contentType=13)
                             elif text.lower() == 'test':
                                 start = time.time()
                                 client.sendText(receiver, "TestSpeed")
                                 elapsed_time = time.time() - start
                                 client.sendText(receiver, "%sdetik" % (elapsed_time))
-                            elif 'spic' in text.lower():
+                            elif 'penampakan' in text.lower():
                                 try:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     u = key["MENTIONEES"][0]["M"]
@@ -70,7 +70,7 @@ while True:
                                     client.sendImageWithURL(receiver, a)
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
-                            elif text.lower() == 'panggill':
+                            elif text.lower() == 'panggil':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
@@ -151,7 +151,7 @@ while True:
                                 pass
                             else:
                                 cctv['sidermem'][op.param1] += "\n~ " + Name
-                                pref=['eh ada','hai kak','aloo..','nah','lg ngapain','halo','sini kak']
+                                pref=['hmmmm...','halow cin','cekrek..','masuk aja','inilah artis kitaa....','hai ..hai..','sini donk cin']
                                 client.sendText(op.param1, str(random.choice(pref))+' '+Name)
                         else:
                             pass
