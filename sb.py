@@ -27,7 +27,7 @@ while True:
                     if msg.toType == 2:
                         may = client.getProfile().mid
                         if may in str(msg.contentMetadata) and 'MENTION' in str(msg.contentMetadata):
-                            pilih = ['yang tag gw jitak','ngapain tag cin, pm aja langsung ?','kalo kangen jangan cuma ngatag aja','duhh tag lagi..tag lagi, lama lama gw jitak ni..','biaya tag mahal oooi... jangan tag muluuu']
+                            pilih = ['yang tag gw jitak','ngapain tag cin, pm aja langsung ?','kalo kangen jangan cuma ngatag aja donk','duhh tag lagi..tag lagi, lama lama gw jitak ni..','biaya tag mahal oooi... jangan tag muluuu','yang ngatag.. jngan2 pingin di anu...','ngtag lagi..apa tampang gw udh mentiyu-tiyukan anganmu?']
                             rslt = random.choice(pilih)
                             client.sendText(msg.to, str(rslt))
                         else:
