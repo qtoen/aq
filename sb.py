@@ -54,7 +54,7 @@ while True:
                                 client.sendText(receiver, "TestSpeed")
                                 elapsed_time = time.time() - start
                                 client.sendText(receiver, "%sdetik" % (elapsed_time))
-                            elif 'penampakan' in text.lower():
+                            elif 'apa kabar' in text.lower():
                                 try:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     u = key["MENTIONEES"][0]["M"]
@@ -70,7 +70,7 @@ while True:
                                     client.sendImageWithURL(receiver, a)
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
-                            elif text.lower() == 'panggil':
+                            elif text.lower() == 'hallo':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
